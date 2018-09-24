@@ -21,6 +21,14 @@ client.on('message', message => {
        message.channel.send('There is currently no commands available.');
 
        }
+ 
+   elseif (message.content === prefix + 'new') {
+           let text = args.join(' ');
+           var server = message.guild;
+           server.createChannel("Ticket"+message.author.id, "text");
+           let channel =message.guild.channels.find("Ticket"+message.author.id, text)
+           channel.send("Subject: "+text)
+        }
 
 });  
 

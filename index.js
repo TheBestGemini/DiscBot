@@ -22,7 +22,7 @@ client.on('message', message => {
 
        }
  
-   elseif (message.content === prefix + 'new') {
+    if (message.content === prefix + 'new') {
            let text = args.join(' ');
            var server = message.guild;
            server.createChannel("Ticket"+message.author.id, "text");

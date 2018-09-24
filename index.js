@@ -14,9 +14,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-    if (message.content === '!ping') {
+    if (message.content === '!info') {
 
-       message.reply('pong');
+       message.channel.send('A discord bot made by @Stotz#4896');
 
        }
 

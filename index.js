@@ -13,11 +13,9 @@ client.on('ready', () => {
  
 
 client.on('message', message => {
-    const command = msg.content.split(' ')[0].substr(process.env.PREFIX.length);
-    const args = msg.content.split(' ').slice(1).join(' ');
-    if (command === 'guide') return msg.channel.send('https://git.io/d.js-heroku');
-    else if (command === 'invite') return msg.channel.send(process.env.INVITE);
-let prefix = process.env.PREFIX
+    const command = message.content.split(' ')[0].substr(process.env.PREFIX.length);
+    const args = message.content.split(' ').slice(1).join(' ');
+    let prefix = process.env.PREFIX
     if (message.content === prefix + 'help') {
 
        message.channel.send('There is currently no commands available.');

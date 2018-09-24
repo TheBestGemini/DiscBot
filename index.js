@@ -14,9 +14,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-    if (message.content === '!info') {
+    if (message.content === '!help') {
 
-       message.channel.send('A discord bot made by @Stotz#4896');
+       message.channel.send('There is currently no commands available.');
 
        }
 

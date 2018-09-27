@@ -27,8 +27,8 @@ client.on('message', message => {
            let text = args.join(' ');
            let server = message.guild;
            server.createChannel("Ticket"+message.author.id, "text");
-           let channel =message.guild.channels.find("Ticket"+message.author.id, text)
-           channel.send("Subject: "+text)
+           let channel =message.guild.channels.find("Ticket"+message.author.id, text);
+           channel.send("Subject: "+text);
     return;
         };
  

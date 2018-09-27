@@ -26,7 +26,7 @@ client.on('message', message => {
   if (message.content === prefix + 'announce') {
            let text = args.join(' ');
            var server = message.guild;
-           let annchannel =message.guild.channels.find("announcements");
+           let annchannel =message.guild.channels.find("name", "announcements");
            let annembed = Discord.RichEmbed()
            annchannel.send({embed: {
             color: 3447003,

@@ -19,6 +19,7 @@ client.on('message', message => {
     if (message.content === prefix + 'help') {
 
        message.channel.send('New');
+       return;
 
        };
  
@@ -28,6 +29,7 @@ client.on('message', message => {
            server.createChannel("Ticket"+message.author.id, "text");
            let channel =message.guild.channels.find("Ticket"+message.author.id, text)
            channel.send("Subject: "+text)
+    return;
         };
  
    

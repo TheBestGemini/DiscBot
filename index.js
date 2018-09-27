@@ -23,14 +23,32 @@ client.on('message', message => {
 
        };
  
-   if (message.content === prefix + 'new') {
+  if (message.content === prefix + 'announce') {
            let text = args.join(' ');
-           let server = message.guild;
-           server.createChannel("Ticket"+message.author.id, "text");
-           let channel =message.guild.channels.find("Ticket"+message.author.id, text);
-           channel.send("Subject: "+text);
-    return;
+           var server = message.guild;
+           let annchannel =message.guild.channels.find("announcements");
+           let annembed = Discord.RichEmbed()
+           annchannel.send({embed: {
+            color: 3447003,
+            author: {
+              name: 'Announcement',
+              icon_url: message.author.avatarURL
+            },
+            title: "Announcement",
+            
+            description: argument,
+            timestamp: new Date(),
+            footer: {
+              icon_url: message.author.avatarURL,
+              text: "Superior's Franchise Bot"
+            }
+          }
+        }); 
+   
+        return message.reply('Done!');
+          
         };
+
  
    
 

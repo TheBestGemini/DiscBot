@@ -18,9 +18,17 @@ client.on('message', message => {
     let prefix = process.env.PREFIX
     if (message.content === prefix + 'help') {
 
-       message.channel.send('There is currently no commands available.');
+       message.channel.send('New');
 
-       }
+       };
+ 
+   if (message.content === prefix + 'new') {
+           let text = args.join(' ');
+           let server = message.guild;
+           server.createChannel("Ticket"+message.author.id, "text");
+           let channel =message.guild.channels.find("Ticket"+message.author.id, text)
+           channel.send("Subject: "+text)
+        };
  
    
 
